@@ -5,8 +5,8 @@ copyright = ""
 
 theme = "minimo"
 
-disqusShortname = "davidressman"
-googleAnalytics = "UA-66618872-5"
+# disqusShortname = "davidressman"
+googleAnalytics = "UA-66618872-4"
 
 Paginate = 10
 preserveTaxonomyNames = true
