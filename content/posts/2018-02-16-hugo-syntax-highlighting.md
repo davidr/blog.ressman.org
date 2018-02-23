@@ -1,7 +1,8 @@
 ---
 date: 2018-02-16
-lastmod: 2018-02-16
-title: Testing Hugo Syntax Highlighting
+lastmod: 2018-02-17
+title: "Hugo Syntax Highlighting"
+description: "snippets from several different programming languages to evaluate hugo syntax"
 authors: ["davidr"]
 categories:
   - hugo
