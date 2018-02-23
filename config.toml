@@ -71,6 +71,7 @@ email = "davidr@ressman.org"
 github = "davidr"
 #gitlab = "davidressman"
 instagram = "davidressman"
+facebook = "davidressman"
 linkedin = "davidressman"
 twitter = "davidressman"
 
@@ -83,7 +84,7 @@ category = "categories"
 tag = "tags"
 
 [permalinks]
-page = "/:slug/"
+posts = "/:year:/:month/:title/"
 
 [blackfriday]
 hrefTargetBlank = true
