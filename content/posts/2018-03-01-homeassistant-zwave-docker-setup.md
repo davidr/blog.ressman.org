@@ -57,4 +57,30 @@ lrwxrwxrwx. 1 root root 7 Mar  1 14:19 /dev/z-stick -> ttyACM0
 # openzwave container
 
 I altered [Rui Marinho's openzwave docker image](https://github.com/ruimarinho/docker-openzwave)
-a bit to shrink the image down
+a bit to shrink the image down, but then I realized it's no longer necessary to use openzwave, so
+there went a couple hours right down the drain
+
+# Home Assistant Container
+
+This seems to work mostly out of the box with docker:
+
+```
+docker run \
+  -d \
+  --name=home-assistant \
+  -v /srv/homeassistant:/config:z \
+  -v /etc/localtime:/etc/localtime:ro \
+  --device /dev/z-stick:/dev/z-stick \
+  --net=host \
+  homeassistant/home-assistant:latest
+```
+
+_Note_: that `:z` at the end of my configuration volume is needed so that Docker updates the SELinux
+label on that directory. Otherwise, SELinux will refuse to let Docker mount it
+
+Poke a hole in the firewall:
+
+```
+[root@oliver]/srv# firewall-cmd --permanent --add-port=8123/tcp
+success
+```
