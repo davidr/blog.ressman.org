@@ -4,15 +4,20 @@ lastmod: 2018-05-06
 title: "PXE Booting x86_64 UEFI Clients with Dnsmasq"
 description: "using UEFI PXE booting to install linux on up boards"
 authors: ["davidr"]
-draft: true
 categories:
   - tutorial
 tags:
   - upboard
   - pxe
   - dnsmasq
-toc: true
+toc: false
 ---
+
+**Update:** *Naturally, the day after I get this up and running, Red Hat announces that [Atomic Host
+will be supplanted by Container Linux](https://coreos.com/blog/coreos-tech-to-combine-with-red-hat-openshift),
+so all of this stuff that's specific to Atomic is effectively deprecated. I'll be starting over with
+Container Linux.*
+
 
 I have a little [Intel NUC](https://www.intel.com/content/www/us/en/products/boards-kits/nuc.html) box I
 use as a server. This is how I configured it to get the Up Boards to boot and install Fedora 
