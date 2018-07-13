@@ -12,7 +12,6 @@ tags:
   - containerlinux
   - tectonic
 toc: true
-draft: true
 ---
 
 Although it's being deprecated as it's merged into OpenShift, the Tectonic installer is still
@@ -55,11 +54,10 @@ k8s     IN CNAME k8s-n01.ressman.org.
 Then because `/dev/sda` is hardcoded into the installer but the Up Boards have `/dev/mmcrblk0`:
 
 ```
-find . -name \*.tmpl -exec sed -e 's,/dev/sda,/dev/mmcrblk0,' -i {} \;
+find .. -name \*.tmpl -exec sed -e 's,/dev/sda,/dev/mmcblk0,' -i {} \;
 ```
 
 # Installing
-
 
 Then just run the installer!
 
